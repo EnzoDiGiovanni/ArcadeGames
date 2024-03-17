@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendu !</title>
+    <link rel="stylesheet" href="pendu.css">
+</head>
+
+<body>
+
+    <h1>Bienvenu sur le jeu du pendu !</h1>
+    <p>Choisissez une lettre sur votre clavier ou en cliquant sur une des lettres ci-dessous</p>
+    <div id="gameContainer">
+        <div class="box1">
+            <h2>Lettre disponible :</h2>
+            <div class="lettersContainer">
+                <button class="letter" data-letter="a">A</button>
+                <button class="letter" data-letter="b">B</button>
+                <button class="letter" data-letter="c">C</button>
+                <button class="letter" data-letter="d">D</button>
+                <button class="letter" data-letter="e">E</button>
+                <button class="letter" data-letter="f">F</button>
+                <button class="letter" data-letter="g">G</button>
+                <button class="letter" data-letter="h">H</button>
+                <button class="letter" data-letter="i">I</button>
+                <button class="letter" data-letter="j">J</button>
+                <button class="letter" data-letter="k">K</button>
+                <button class="letter" data-letter="l">L</button>
+                <button class="letter" data-letter="m">M</button>
+                <button class="letter" data-letter="n">N</button>
+                <button class="letter" data-letter="o">O</button>
+                <button class="letter" data-letter="p">P</button>
+                <button class="letter" data-letter="q">Q</button>
+                <button class="letter" data-letter="r">R</button>
+                <button class="letter" data-letter="s">S</button>
+                <button class="letter" data-letter="t">T</button>
+                <button class="letter" data-letter="u">U</button>
+                <button class="letter" data-letter="v">V</button>
+                <button class="letter" data-letter="w">W</button>
+                <button class="letter" data-letter="x">X</button>
+                <button class="letter" data-letter="y">Y</button>
+                <button class="letter" data-letter="z">Z</button>
+            </div>
+        </div>
+        <div class="box2">
+            <p>Étape <span class="step">0</span></p>
+            <img src="images/hangman-0.svg" alt="étape du pendu" class="imagesStep">
+        </div>
+    </div>
+    <div class="wordContainer">
+        <h3>Le mot à deviner contient <span class="letterNbr"></span> lettres</h3>
+        <p class="word"></p>
+    </div>
+    <script src="pendu.js"></script>
+</body>
+
+</html>

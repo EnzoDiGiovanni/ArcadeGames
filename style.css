@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+}
+
+/* Games Container */
+
+#gamesContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#gamesContainer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: red;
+  width: 10%;
+  height: 230%;
+  animation: spin 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+#gamesContainer h1,
+#gamesContainer p {
+  padding: 15px;
+}
+
+#gamesContainer p {
+  font-weight: 2000;
+}
+
+.hide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 95%;
+  width: 95%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  border-radius: 15px;
+}
+
+.gamesChoice {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  place-items: center;
+}
+
+.gamesChoice .cardChoice img {
+  margin-top: 20px;
+  width: 250px;
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.gamesChoice .cardChoice img:hover {
+  transform: scale(1.2);
+}

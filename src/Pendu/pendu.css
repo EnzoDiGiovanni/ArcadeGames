@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  padding: 45px;
+}
+
+body > p {
+  text-align: center;
+  font-size: 20px;
+}
+
+#gameContainer {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+#gameContainer h2 {
+  padding: 30px;
+}
+
+.lettersContainer {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 30px;
+}
+
+.lettersContainer button {
+  text-align: center;
+  font-size: 13px;
+  padding: 5px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lettersContainer button:disabled {
+  pointer-events: none;
+  background: grey;
+}
+
+.lettersContainer button:hover {
+  background-color: rgb(240, 128, 153);
+  color: black;
+}
+
+.box1 {
+  border-right: 1px solid black;
+  padding-right: 60px;
+}
+
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box2 img {
+  width: 200px;
+  padding: 30px;
+}
+
+.wordContainer h3,
+.wordContainer p {
+  text-align: center;
+  padding: 15px 0 30px;
+}
+
+.wordContainer p {
+  font-size: 70px;
+}

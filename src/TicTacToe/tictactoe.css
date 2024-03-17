@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.cell {
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:hover {
+  background-color: orange;
+  color: white;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+  border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+  border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+
+.oui {
+  background-color: red;
+}
+
+#restartButton {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: green;
+  position: relative;
+  transition: all 1s ease;
+  text-transform: uppercase;
+  font-size: 25px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+#restartButton:hover {
+  color: black;
+}
+
+#restartButton::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 120%;
+  height: 0%;
+  background: red;
+  z-index: -1;
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%) rotate(10deg);
+}
+
+#restartButton:hover::before {
+  height: 180%;
+}
+
+#home {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+#home::before,
+#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#home::before {
+  left: -10px;
+  background: #240046;
+}
+
+#home::after {
+  right: -10px;
+  background: #5a189a;
+}
+
+#home:hover::before,
+#home:hover::after {
+  width: 58%;
+}
+
+#home:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+#home span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
