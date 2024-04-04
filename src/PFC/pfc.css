@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.gameContainer {
+  width: 90%;
+  max-width: 800px;
+  border: 2px solid #005a9c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gameContainer h1 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 2em;
+}
+
+.gameContainer h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+  color: #005a9c;
+  margin: 0;
+  background-color: #e9ecef;
+  width: 100%;
+}
+
+.imagesContainer {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.imagesContainer img {
+  width: 120px; /* Adjusted for better responsiveness */
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: none; /* Removed the border for a cleaner look */
+  border-radius: 50%; /* Perfect circles */
+}
+
+.imagesContainer img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.score {
+  padding: 20px 0;
+}
+
+.score h2,
+.score p {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+}
+
+.winningMessage {
+  font-size: 1.5em;
+  color: #28a745; /* A green color for a positive winning message */
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 20px;
+}
+
+#home {
+  display: inline-block;
+  background: blue;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+#home::before,
+#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#home::before {
+  left: -10px;
+  background: #240046;
+}
+
+#home::after {
+  right: -10px;
+  background: #5a189a;
+}
+
+#home:hover::before,
+#home:hover::after {
+  width: 58%;
+}
+
+#home:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+#home span {
+  color: white;
+  font-size: 13px;
+  transition: all 0.3s ease-in;
+}
+
+.restartGame {
+  padding: 20px 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
+}
+
+.restartGame:hover {
+  background-color: #357abd;
+}

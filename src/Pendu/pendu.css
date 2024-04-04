@@ -1,85 +1,93 @@
+/* Style de base pour la normalisation et le box-sizing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Arial", sans-serif; /* Police plus nette */
 }
 
 body {
-  height: 100vh;
-}
-
-h1 {
-  text-align: center;
-  padding: 45px;
-}
-
-body > p {
-  text-align: center;
-  font-size: 20px;
-}
-
-#gameContainer {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-}
-
-#gameContainer h2 {
-  padding: 30px;
-}
-
-.lettersContainer {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 30px;
-}
-
-.lettersContainer button {
-  text-align: center;
-  font-size: 13px;
-  padding: 5px;
-  background-color: crimson;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.lettersContainer button:disabled {
-  pointer-events: none;
-  background: grey;
-}
-
-.lettersContainer button:hover {
-  background-color: rgb(240, 128, 153);
-  color: black;
-}
-
-.box1 {
-  border-right: 1px solid black;
-  padding-right: 60px;
-}
-
-.box2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  background-color: #f0f0f0; /* Couleur de fond plus douce */
 }
 
-.box2 img {
-  width: 200px;
+h1,
+p {
+  color: #333; /* Couleur de texte plus douce */
+}
+
+body > p {
   padding: 30px;
+}
+/* Style du conteneur principal du jeu */
+#gameContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre douce pour le conteneur */
+}
+
+.box1,
+.box2 {
+  padding: 20px;
+}
+
+.box1 {
+  border-right: 2px solid #eee;
+  padding: 80px;
+}
+
+.box2 p {
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.lettersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 80px;
+}
+
+.letter {
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition pour l'interaction */
+}
+
+.letter:disabled {
+  background: #ccc;
+}
+
+.letter:hover:not(:disabled) {
+  background-color: #0056b3; /* Couleur au survol */
+}
+
+.wordContainer {
+  margin-top: 20px;
 }
 
 .wordContainer h3,
 .wordContainer p {
   text-align: center;
-  padding: 15px 0 30px;
 }
 
-.wordContainer p {
-  font-size: 70px;
+.word {
+  font-size: 32px;
+  letter-spacing: 5px; /* Espacement pour une meilleure lisibilité */
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock | Pappers | Scissors</title>
+    <link rel="stylesheet" href="pfc.css">
+</head>
+
+<body>
+    <div class="gameContainer">
+        <h1>Pierre | Papier | Ciseaux !</h1>
+        <h2 class="winningMessage"></h2>
+        <div class="imagesContainer">
+            <div class="rock" data-choice="1"><img src="images/rock.webp" alt="Rock"></div>
+            <div class="papers" data-choice="2"> <img src="images/pappers.webp" alt="Pappers"></div>
+            <div class="scissors" data-choice="3"> <img src="images/scissors.webp" alt="Scissors">
+            </div>
+        </div>
+        <div class="score">
+            <div class="currentPlay">
+                <p class="currentUserPlay"></p>
+                <p class="currentRobotPlay"></p>
+            </div>
+            <h2>Les scores sont : </h2>
+            <p class="robotScore">Robot : 0</p>
+            <p class="userScore">Vous : 0</p>
+        </div>
+        <a href="/index.html"><button id="home"><span>Retour à l'accueil</span></button></a>
+    </div>
+    <button class="restartGame">Rejouer !</button>
+    <script src="pfc.js"></script>
+</body>
+
+</html>

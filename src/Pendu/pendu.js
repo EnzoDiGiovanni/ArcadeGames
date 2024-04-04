@@ -1,23 +1,105 @@
 // Words Array
 let words = [
-  "galaxie",
-  "planete",
-  "astronaute",
-  "comete",
-  "satellite",
-  "univers",
-  "etoile",
-  "nebuleuse",
-  "quasar",
-  "constellation",
-  "orbite",
-  "eclipse",
-  "lumiere",
-  "telescope",
-  "voyageur",
-  "exploration",
+  "boutique",
   "cosmos",
-  "astéroïde",
+  "eclipse",
+  "satellite",
+  "randonnee",
+  "manoir",
+  "information",
+  "zoo",
+  "ville",
+  "marche",
+  "croisiere",
+  "escrime",
+  "hypermarche",
+  "expedition",
+  "centre",
+  "bmx",
+  "constellation",
+  "golf",
+  "competition",
+  "course",
+  "cabane",
+  "glacier",
+  "aventure",
+  "observatoire",
+  "commercial",
+  "voyageur",
+  "ile",
+  "nebuleuse",
+  "yoga",
+  "chalet",
+  "gare",
+  "metropole",
+  "universite",
+  "tente",
+  "ocean",
+  "volcan",
+  "foire",
+  "autoroute",
+  "curling",
+  "bibliotheque",
+  "cinema",
+  "quasar",
+  "surf",
+  "salon",
+  "stade",
+  "theatre",
+  "forteresse",
+  "arc",
+  "danse",
+  "academie",
+  "aeroport",
+  "village",
+  "excursion",
+  "plongee",
+  "paysage",
+  "restaurant",
+  "tunnel",
+  "safari",
+  "galerie",
+  "chateau",
+  "escalade",
+  "skateboard",
+  "peche",
+  "voyage",
+  "lutte",
+  "pont",
+  "trek",
+  "bibliotheque",
+  "jardin",
+  "hotel",
+  "galaxie",
+  "magasin",
+  "parc",
+  "gymnastique",
+  "cyclisme",
+  "foret",
+  "chasse",
+  "hockey",
+  "palais",
+  "serre",
+  "match",
+  "tournoi",
+  "riviere",
+  "roller",
+  "snowboard",
+  "lumiere",
+  "circuit",
+  "basketball",
+  "ski",
+  "concert",
+  "cafe",
+  "ecole",
+  "capitale",
+  "asteroide",
+  "montagne",
+  "exposition",
+  "arts",
+  "voile",
+  "reserve",
+  "boxe",
 ];
 
 let usedLetter = [];
@@ -66,8 +148,6 @@ letterNbr.innerText = words[randomWord].length;
 let word = document.querySelector(".word");
 writeWord();
 
-console.log(words[randomWord]);
-
 // Capturer les entrées au clique
 
 document.querySelectorAll("button.letter").forEach((button) => {
@@ -87,6 +167,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+// Function CheckLetter
 function checkLetter(letter) {
   if (usedLetter.includes(letter)) {
     return;
@@ -110,11 +191,12 @@ function checkLetter(letter) {
     step.textContent = currentStep;
     imgStep.src = "images/hangman-" + currentStep + ".svg";
     if (currentStep == 6) {
-      alert("Perdu");
+      alert("Perdu le mot était : " + words[randomWord]);
     }
   }
 }
 
+// Function writeWord
 function writeWord() {
   let wordLetters = words[randomWord].split("");
 

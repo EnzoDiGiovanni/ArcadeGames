@@ -9,10 +9,21 @@
 </head>
 
 <body>
-    <div class="gameContainer">
-        <textarea name="nbr" id="nbr" cols="30" rows="10"></textarea>
+    <div class="container">
+        <h1>Le Juste Prix</h1>
+        <p>Devinez le prix entre 0 & 100 <br> <br><span class="attempsLeft"></span></p>
+        <p class="moreLess"></p>
+        <input type="number" id="userGuess" placeholder="Entrez votre prix" autofocus>
+        <button id="submitGuess">Soumettre</button>
+        <a href="/index.html"><button id="home"><span>Retour à l'accueil</span></button></a>
+        <div id="result">
+            <h2>Résultat !</h2>
+            <img class="victorySmiley" src="images/victory.webp" alt="victory Smiley">
+            <p class="resultMessage"></p>
+            <button class="restartGame">Rejouer !</button>
+        </div>
     </div>
-
+    <script src="justeprix.js"></script>
 </body>
 
 </html>
