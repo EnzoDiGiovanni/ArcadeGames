@@ -1,16 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Making your first Phaser 3 Game - Part 10</title>
+    <title>Pong</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
-
+    <link rel="stylesheet" href="pong.css">
 
 </head>
 
 <body>
+    <p id="countdownDisplay"></p>
+    <div class="gameContainer">
+        <div class="container">
+            <h1>Bienvenu sur le fameux jeu, PONG !</h1>
 
+            <div class="chooseGames">
+                <h2>Choisir le mode de jeu : <br> <br>
+                    (Utiliser "Z" et "S" pour déplacer le joueur 1/ Utiliser "⬆️" et "⬇️" pour déplacer le joueur 2 )
+                </h2>
+                <button class="JcJ">👤 contre 👤</button>
+                <button class="JcR">👤 contre 🤖</button>
+            </div>
+        </div>
+    </div>
     <script type="module" src="pong.js"></script>
 </body>
 
