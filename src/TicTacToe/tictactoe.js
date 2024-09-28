@@ -1,6 +1,7 @@
 const board = document.querySelector(".board");
 const cells = document.querySelectorAll(".cell");
 const playerVictory = document.querySelector(".playerVictory");
+
 document.querySelector("#restartButton").addEventListener("click", restartGame);
 
 const WINNING_COMBINATIONS = [
@@ -39,6 +40,7 @@ function handleClick(event) {
 
 function endGame(draw) {
   gameActive = false;
+  board.style.pointerEvents = "none";
   if (draw) {
     playerVictory.innerHTML = "Egalité !";
   } else {
@@ -70,6 +72,7 @@ function checkForDraw() {
 
 function restartGame() {
   gameActive = true;
+  board.style.pointerEvents = "auto";
   xTurn = true;
   playerVictory.innerHTML = "";
   cells.forEach((cell) => {

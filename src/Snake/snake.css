@@ -1,0 +1,51 @@
+#home {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+#home::before,
+#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#home::before {
+  left: -10px;
+  background: #240046;
+}
+
+#home::after {
+  right: -10px;
+  background: #5a189a;
+}
+
+#home:hover::before,
+#home:hover::after {
+  width: 58%;
+}
+
+#home:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+#home span {
+  color: black;
+  font-size: 13px;
+  transition: all 0.3s ease-in;
+}

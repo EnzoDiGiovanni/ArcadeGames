@@ -1,3 +1,4 @@
+// @ts-nocheck
 // /////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
     }
 
-    // Pour retirer les écouteurs, assurez-vous que la condition de victoire est vérifiée :
+    // S'assurer que la condition de victoire est vérifiée :
     if (userScore == 3 || robotScore == 3) {
       rock.removeEventListener("click", playGame);
       papers.removeEventListener("click", playGame);
@@ -89,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         papers.removeEventListener("click", playGame);
         scissors.removeEventListener("click", playGame);
 
-        // Affichez le message de victoire ou de défaite ici
+        // Afficher le message de victoire ou de défaite ici
         const winningMessage = document.querySelector(".winningMessage");
         if (userScore == 3) {
           winningMessage.textContent = "Bravo, vous avez gagné !";
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
           winningMessage.textContent = "Dommage, le robot a gagné !";
         }
       }
-      // Affichez le message de victoire ou de défaite ici
+      // Afficher le message de victoire ou de défaite ici
     }
     updateScore();
   }
